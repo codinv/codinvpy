@@ -1,1 +1,1 @@
-python3 ./startup_script.py
+python3 -u ./startup_script.py
