@@ -5,7 +5,6 @@
 #### Запуск с помощью Docker Compose
 ```yml
 # docker-compose.yml
-
 version: '3.8'
 services:
   codinvpy:
@@ -13,9 +12,10 @@ services:
     image: ghcr.io/codinv/codinvpy
     network_mode: bridge
     volumes:
-      - ./your_python_script.py:/opt/pywd/startup_script.py
+      - ./:/app
     environment:
       - TZ=Europe/Moscow
+      - PY_SCRIPT=./startup_script.py
     restart: unless-stopped
 ```
 

@@ -1,1 +1,1 @@
-print('Hello!\nChange "/opt/pywd/startup_script.py" as you need.')
+print('Hello!\nChange "/app/startup_script.py" as you need.')
