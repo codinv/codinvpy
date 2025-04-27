@@ -21,10 +21,12 @@ services:
 
 #### Запуск с помощью Docker Run
 ```bash
-docker run -d --name codinvpy \
--v ./your_python_script.py:/opt/pywd/startup_script.py \
--e TZ=Europe/Moscow \
---net bridge \
---restart unless-stopped \
-ghcr.io/codinv/codinvpy
+docker run -d \
+  --name codinvpy \
+  --network bridge \
+  -v "$(pwd)":/app \
+  -e TZ=Europe/Moscow \
+  -e PY_SCRIPT=./startup_script.py \
+  --restart unless-stopped \
+  ghcr.io/codinv/codinvpy
 ```
