@@ -1,5 +1,5 @@
-#!/bin/sh
-set -euo pipefail
+#!/bin/bash
+set -eo pipefail
 
 [ -n "${TZ:-}" ] && [ -f "/usr/share/zoneinfo/$TZ" ] && {
     ln -snf "/usr/share/zoneinfo/$TZ" /etc/localtime
